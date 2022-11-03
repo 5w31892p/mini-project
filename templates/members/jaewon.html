@@ -85,15 +85,14 @@
             margin: 10px 10px;
             width: 300px;
             height: 300px;
-
         }
+
     </style>
 
     <script>
         $(document).ready(function () {
             show_comment()
         });
-
 
         function save_comment() {
 
@@ -106,7 +105,6 @@
             $.ajax({
                 type: 'POST',
                 url: '/comments',
-
                 data: { name_give: name, comment_give: comment, member_give: member },
 
                 success: function (response) {
@@ -135,15 +133,13 @@
                                                     <p>${comment}</p>
                                                     <footer class="blockquote-footer">${name}</footer>
                                                 </blockquote>
-                                            </div>
                                             <button onclick="delete_comment('${name}')" type="button" class="btn btn-primary">방명록 삭제</button>
+
+                                            </div>
+
                                         </div>`
                             $('#comment-list').append(temp_html)
-
                         }
-
-
-
                     }
                 }
             });
@@ -169,7 +165,7 @@
 
 <body>
     <div class="mypic">
-        <h1>이재원A를 소개 합니다!</h1>
+        <h1>이재원을 소개 합니다!</h1>
     </div>
     <!--    <button onclick="save_comment()" type="button" class="btn btn-dark">방명록 남기기</button>-->
     <!-- Button trigger modal -->
